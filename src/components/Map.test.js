@@ -17,7 +17,33 @@ it('accepts a map string as argument', () => {
   expect(map2).toBeInstanceOf(Map)
 })
 
+it('validates map line length', () => {
+  expect(() => new Map(createInvalidLineLengthMapString())).toThrow('all map lines should have the same length')
+})
+
+it('knows height and width', () => {
+  const map = new Map(createMapString())
+  expect(map.height).toBe(11)
+  expect(map.width).toBe(17)
+})
+
 function createMapString () {
+  return `
+ ╔═══════════════╗
+ ║               ║
+ ║               ║
+ ║               ║
+ ║               ║
+ ║               ║
+ ║               ║
+ ║               ║
+ ║               ║
+ ║               ║
+ ╚═══════════════╝
+`
+}
+
+function createInvalidLineLengthMapString () {
   return `
 ╔═══════════════╗
 ║               ║
@@ -29,5 +55,6 @@ function createMapString () {
 ║               ║
 ║               ║
 ║               ║
-╚═══════════════╝`
+╚═══════════════
+  `
 }
