@@ -10,9 +10,12 @@ it('needs a map', () => {
   expect(() => new Map({map: ''})).toThrow('invalid map type, which should be a string')
 })
 
-it('accepts a map string as argument', () => {
+it('accepts a map string as sole argument', () => {
   const map1 = new Map(createMapString())
   expect(map1).toBeInstanceOf(Map)
+})
+
+it('accepts a map string as .map option', () => {
   const map2 = new Map({map: createMapString()})
   expect(map2).toBeInstanceOf(Map)
 })

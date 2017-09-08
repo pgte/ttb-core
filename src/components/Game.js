@@ -1,6 +1,6 @@
 'use strict'
 
-import Map from './Map'
+const Map = require('./Map')
 
 module.exports = createGame
 
@@ -10,6 +10,6 @@ function createGame (options) {
 
 class Game {
   constructor (options) {
-    this.map = new Map(options.map)
+    this.map = new Map(options && options.map)
   }
 }
