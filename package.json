@@ -4,7 +4,8 @@
   "description": "Take The Base - Core",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "standard",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/pgte/ttb-core/issues"
   },
-  "homepage": "https://github.com/pgte/ttb-core#readme"
+  "homepage": "https://github.com/pgte/ttb-core#readme",
+  "dependencies": {
+    "@std/esm": "^0.8.2"
+  },
+  "devDependencies": {
+    "jest": "^21.0.1",
+    "pre-commit": "^1.2.2",
+    "standard": "^10.0.3"
+  }
 }
