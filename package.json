@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/pgte/ttb-core#readme",
   "dependencies": {
-    "@std/esm": "^0.8.2"
+    "@std/esm": "^0.8.2",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "jest": "^21.0.1",
@@ -30,6 +31,7 @@
     "standard": "^10.0.3"
   },
   "pre-commit": [
-    "lint", "test"
+    "lint",
+    "test"
   ]
 }
