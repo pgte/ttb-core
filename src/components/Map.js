@@ -2,7 +2,7 @@
 
 class Map {
   constructor (options) {
-    const map = options && options.map || options
+    const map = (options && options.map) || options
 
     if (!map || (typeof map) !== 'string') {
       throw new Error('invalid map type, which should be a string')

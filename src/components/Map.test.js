@@ -1,5 +1,7 @@
 'use strict'
 
+/* global it, expect */
+
 const Map = require('./Map')
 
 it('needs a map', () => {
@@ -10,9 +12,10 @@ it('needs a map', () => {
 
 it('accepts a map string as argument', () => {
   const map1 = new Map(createMapString())
-  const map2 = new Map({map: createMapString() })
+  expect(map1).toBeInstanceOf(Map)
+  const map2 = new Map({map: createMapString()})
+  expect(map2).toBeInstanceOf(Map)
 })
-
 
 function createMapString () {
   return `
